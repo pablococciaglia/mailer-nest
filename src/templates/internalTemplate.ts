@@ -28,8 +28,8 @@ export const internalTemplate = (
     <p>${'alreadyEvaluated' in dto ? `Tiene diagnostico?:  ${dto.alreadyEvaluated}` : ''}</p>
     <p>${'admission' in dto ? `Ha realizado admisión?:  ${dto.admission}` : ''}</p>
     <p>${'reason' in dto ? `Motivo de consulta:  ${dto.reason}` : ''}</p>
-    <p>${'diagnose' in dto ? `Diagnóstico?: ${dto.diagnose}` : ''}</p>
     <p>${'hasDiagnose' in dto ? `Tiene diagnóstico?: ${dto.hasDiagnose}` : ''}</p>
+    <p>${'diagnose' in dto ? `Diagnóstico?: ${dto.diagnose}` : ''}</p>
     <p>${'alreadyEvaluated' in dto ? `Ya fue evaluado?: ${dto.alreadyEvaluated}` : ''}</p>
     <p>${'evaluationType' in dto ? `Tipo de evaluación?: ${dto.evaluationType}` : ''}</p>
     <p>Error a la hora de enviar E-mail al paciente: ${infoReject.join(', ') || 'no hubo error'}</p>
