@@ -1,13 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { CreateEvaluationDto } from './dto/create-evaluation.dto';
+import { CreateTherapyDto } from './dto/create-therapy.dto';
 import { MailerService } from 'src/mailer/mailer.service';
 import { FormOptions } from 'src/interfaces/interfaces';
 
 @Injectable()
-export class EvaluationService {
+export class TherapyService {
   constructor(private readonly mailerService: MailerService) {}
-
-  create(createEvaluationDto: CreateEvaluationDto) {
-    this.mailerService.sendEmail(createEvaluationDto, FormOptions.EVALUACION);
+  createEmailTherapy(createTherapyDto: CreateTherapyDto) {
+    this.mailerService.sendEmail(createTherapyDto, FormOptions.TERAPIA);
   }
 }

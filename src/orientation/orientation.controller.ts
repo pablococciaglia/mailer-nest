@@ -13,6 +13,7 @@ export class OrientationController {
     @Res() res: Response,
   ) {
     try {
+      console.log(createOrientationDto);
       this.orientationService.create(createOrientationDto);
       return res.status(HttpStatus.OK).send();
     } catch (error) {
