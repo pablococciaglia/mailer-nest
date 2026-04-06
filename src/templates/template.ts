@@ -1,5 +1,5 @@
 export const template = (name: string) => `
-    <!doctype html>
+<!DOCTYPE html>
 <head>
   <title>Consulta recibida</title>
   <style type="text/css">
@@ -17,13 +17,34 @@ export const template = (name: string) => `
       padding: 0;
       width: 100% !important;
     }
-
+    footer {
+      padding: 1rem 2rem;
+      background-color: #808080;
+    }
     h1,
     h2,
     p,
     a {
       font-family: Arial, sans-serif;
-      line-height: 1.3;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-direction: row;
+      text-decoration: none;
+      margin-bottom: 1rem;
+    }
+    span {
+      color: white;
+    }
+
+    .btn {
+      display: flex;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
     }
 
     img {
@@ -31,15 +52,17 @@ export const template = (name: string) => `
       width: 100%;
       display: block;
     }
-
+    .grow-parent {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .grow {
+      flex-grow: 1;
+    }
     .container {
       width: 100%;
       padding: 10px;
-    }
-
-    .content {
-      display: block;
-      padding: 1em;
     }
 
     h1,
@@ -52,103 +75,63 @@ export const template = (name: string) => `
         width: 100% !important;
         max-width: 600px !important;
         margin: 0 auto !important;
-        display: block !important;
-      }
-
-      .content {
-        width: 50% !important;
-        font-size: 16px !important;
-        display: table-cell !important;
+        display: flex;
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <html lang="en">
   <body>
-  <h1>PsicoValGodoy</h1>
-  <h2>Consulta recibida</h2>
-  <p>${name}, gracias por enviar tu consulta, a la brevedad nos pondremos en contacto contigo.</p>
-    <div lang="en" dir="ltr" style="padding: 0; margin: 0">
-      <table
-        class="container"
-        role="presentation"
-        width="600"
-        cellspacing="0"
-        cellpadding="0"
-        align="center"
-        style="border-collapse: collapse; max-width: 600px; width: 100%"
-      >
-        <tr>
-          <td align="center">
-            <h1>
-              <img src="https://fakeimg.pl/600x300/" alt="" width="600" />
-            </h1>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <!--[if mso]>
-						<table role="presentation" align="center" width="600" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
-							<tr>
-								<td>
-						<![endif]-->
-            <table
-              role="presentation"
-              border="0"
-              cellspacing="0"
-              cellpadding="0"
-              style="border-collapse: collapse; max-width: 600px; width: 100%"
-              width="600"
-            >
-              <tr>
-                <td class="content">
-                  <h2>Lorem, ipsum dolor.</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Beatae, consequatur itaque? Quaerat sunt, repudiandae magnam
-                    ipsum atque officiis, fuga molestiae itaque vitae tempore
-                    sit iste aut expedita similique consectetur repellendus?
-                  </p>
-                </td>
-                <td class="content">
-                  <h2>Lorem, ipsum dolor.</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Beatae, consequatur itaque? Quaerat sunt, repudiandae magnam
-                    ipsum atque officiis, fuga molestiae itaque vitae tempore
-                    sit iste aut expedita similique consectetur repellendus?
-                  </p>
-                </td>
-              </tr>
-            </table>
-            <!--[if mso]>
-								</td>
-							</tr>
-						</table>
-						<![endif]-->
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <table
-              role="presentation"
-              cellspacing="0"
-              cellpadding="0"
-              border="0"
-              width="600"
-              align="center"
-              style="border-collapse: collapse"
-            >
-              <tr>
-                <td class="content" style="border-top: thin solid #000">
-                  <p>123 Main Street<br />Main City, USA 00000</p>
-                  <p><a href="#">Unsubscribe</a></p>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
+    <div class="grow-parent">
+      <div class="container">
+        <h1>PsicoValGodoy</h1>
+        <h2>Consulta recibida</h2>
+        <p>
+          ${name}, gracias por enviar tu consulta, a la brevedad nos pondremos
+          en contacto contigo.
+        </p>
+      </div>
+      <div class="grow"></div>
+      <footer>
+        <a
+          href="https://www.youtube.com/@psicovalgodoy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button class="btn">
+          </button>
+          <span>@psicovalgodoy</span>
+        </a>
+        <a
+          href="https://www.tiktok.com/@psicovalgodoy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button class="btn">
+          </button>
+          <span>@psicovalgodoy</span>
+        </a>
+        <a
+          href="https://www.instagram.com/psicovalgodoy/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button class="btn">
+          </button>
+          <span>@psicovalgodoy</span>
+        </a>
+        <a
+          class="linkclass"
+          href="https://wa.me/541131242384"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button class="btn">
+          </button>
+          <span>+54 11 31242384</span>
+        </a>
+      </footer>
     </div>
   </body>
 </html>
