@@ -9,6 +9,7 @@ async function bootstrap() {
       'http://localhost:4200',
       'https://psicovalgodoy.netlify.app/',
       'https://psicovalgodoy.com/',
+      'https://www.psicovalgodoy.com/',
     ],
   });
 
