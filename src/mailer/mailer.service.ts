@@ -36,7 +36,7 @@ export class MailerService {
     });
 
     await this.mailTransport().sendMail({
-      to: 'cocciagliap@hotmail.com',
+      to: 'psicovalgodoy@gmail.com',
       subject: 'Consulta desde Web',
       text: `${JSON.stringify(dto)}`,
       html: internalTemplate(dto, info.rejected, queryType),
