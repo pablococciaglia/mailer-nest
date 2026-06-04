@@ -13,12 +13,12 @@ export class MailerService {
   constructor(private readonly configService: ConfigService) {}
   mailTransport() {
     const transporter = nodemailer.createTransport({
-      host: this.configService.get<string>('MAIL_HOST'),
-      port: +this.configService.get<string>('MAIL_PORT'),
+      host: 'smtp.hostinger.com',
+      port: 465,
       secure: true,
       auth: {
-        user: this.configService.get<string>('MAIL_USER'),
-        pass: this.configService.get<string>('MAIL_PASS'),
+        user: 'no-reply@psicovalgodoy.com',
+        pass: 'Pasteldepapas2025@',
       },
     });
     return transporter;
