@@ -34,9 +34,10 @@ export class MailerService {
       text: 'Hemos recibido tu consulta y pronto nos pondremos en contacto contigo.', // Plain-text version of the message
       html: template(dto.name), // HTML version of the message
     });
-
+    console.log(JSON.stringify(dto));
     await this.mailTransport().sendMail({
       to: 'psicovalgodoy@gmail.com',
+      from: `"psicovalgodoy.com" <${this.configService.get<string>('MAIL_USER')}>`,
       subject: 'Consulta desde Web',
       text: `${JSON.stringify(dto)}`,
       html: internalTemplate(dto, info.rejected, queryType),
