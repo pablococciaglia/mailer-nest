@@ -34,7 +34,7 @@ export enum AlreadyEvaluated {
 export enum EvaluationType {
   AUTISMO = 'Autismo',
   TDAH = 'TDAH',
-  ANSIEDAD = 'Ansiedad',
+  AACC = 'AACC',
   TOC = 'TOC',
   OTRO = 'Otro',
 }

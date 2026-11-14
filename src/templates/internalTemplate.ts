@@ -32,6 +32,7 @@ export const internalTemplate = (
     <p>${'diagnose' in dto ? `Diagnóstico: ${dto.diagnose}` : ''}</p>
     <p>${'alreadyEvaluated' in dto ? `Ya fue evaluado?: ${dto.alreadyEvaluated}` : ''}</p>
     <p>${'evaluationType' in dto ? `Tipo de evaluación?: ${dto.evaluationType}` : ''}</p>
+    <p>${'testResults' in dto ? `Entró por el test de AACC - Resultado: ${dto.testResults}` : ''}</p>
     <p>Error a la hora de enviar E-mail al paciente: ${infoReject.join(', ') || 'no hubo error'}</p>
   </body>
 </html>

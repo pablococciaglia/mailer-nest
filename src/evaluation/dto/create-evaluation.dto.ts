@@ -7,6 +7,7 @@ import {
   IsEmail,
   IsNotEmpty,
   IsEnum,
+  Max,
 } from 'class-validator';
 import { Country } from 'src/interfaces/countries';
 import {
@@ -66,4 +67,10 @@ export class CreateEvaluationDto {
   @IsNotEmpty()
   @IsEnum(EvaluationType)
   evaluationType: string;
+
+  @IsInt()
+  @IsPositive()
+  @Min(27)
+  @Max(135)
+  testResults: number;
 }
