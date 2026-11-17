@@ -48,9 +48,13 @@ export const template = (name: string) => `
     }
 
     img {
-      max-width: 600px;
-      width: 100%;
-      display: block;
+      display: flex;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
     }
     .grow-parent {
       height: 100vh;
@@ -94,31 +98,28 @@ export const template = (name: string) => `
       </div>
       <div class="grow"></div>
       <footer>
-        <a
-          href="https://www.youtube.com/@psicovalgodoy"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button class="btn">
-          </button>
+        <a href="https://www.youtube.com/@psicovalgodoy" target="_blank" rel="noopener noreferrer">
+          <img
+            class="btn"
+            src="https://res.cloudinary.com/ddbrs5z8v/image/upload/v1794878086/150897945_10464410_eibee6.png"
+            alt="YouTube"
+          />
           <span>@psicovalgodoy</span>
         </a>
-        <a
-          href="https://www.tiktok.com/@psicovalgodoy"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button class="btn">
-          </button>
+        <a href="https://www.tiktok.com/@psicovalgodoy" target="_blank" rel="noopener noreferrer">
+          <img
+            class="btn"
+            src="https://res.cloudinary.com/ddbrs5z8v/image/upload/v1794878086/602179070ad3230004b93c28_boqznm.png"
+            alt="TikTok"
+          />
           <span>@psicovalgodoy</span>
         </a>
-        <a
-          href="https://www.instagram.com/psicovalgodoy/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button class="btn">
-          </button>
+        <a href="https://www.instagram.com/psicovalgodoy/" target="_blank" rel="noopener noreferrer">
+          <img
+            class="btn"
+            src="https://res.cloudinary.com/ddbrs5z8v/image/upload/v1794878086/206467796_10900020_y0hywd.png"
+            alt="Instagram"
+          />
           <span>@psicovalgodoy</span>
         </a>
         <a
@@ -127,8 +128,11 @@ export const template = (name: string) => `
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button class="btn">
-          </button>
+          <img
+            class="btn"
+            src="https://res.cloudinary.com/ddbrs5z8v/image/upload/v1794878086/580b57fcd9996e24bc43c543_bwmgbd.png"
+            alt="WhatsApp"
+          />
           <span>+54 11 31242384</span>
         </a>
       </footer>
